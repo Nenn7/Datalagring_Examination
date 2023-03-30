@@ -2,5 +2,7 @@
 
 internal class StatusEntity
 {
-    // Ett ärende kan ha olika statuslägen; Ej påbörjad, Pågående, Avslutad
+    public int Id { get; set; } 
+    public string Status { get; set; } = null!;
+    public ICollection<CaseEntity> Cases { get; set; } = new HashSet<CaseEntity>();
 }
