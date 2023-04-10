@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Datalagring_examination.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Datalagring_examination.Contexts;
 
@@ -21,4 +22,9 @@ internal class DataContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
     }
+
+    public DbSet<CaseEntity> Cases { get; set; }
+    public DbSet<CommentEntity> Comments { get; set; }
+    public DbSet<CustomerEntity> Customers { get; set; }
+    public DbSet<StatusEntity> Statuses { get; set; }
 }
