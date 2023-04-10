@@ -14,6 +14,8 @@ internal class ProgramServices
 
 	public async Task Main()
 	{
+		//Main menu funcitonality
+
 		Console.WriteLine("---------------Huvudmeny---------------");
 		Console.WriteLine("Välj ett av 5 alternativ: \n 1: Skapa nytt ärende \n 2: Skapa kommentar till ärende \n 3: Se alla ärenden \n 4: Hämta ärende med ID \n 5: Ändra status på ärende");
 
@@ -49,6 +51,8 @@ internal class ProgramServices
 
 	public async Task CreateCase()
 	{
+		//Creates a new customer and case
+
 		Console.Clear();
 
 		CaseModel newCase = new();
@@ -86,6 +90,8 @@ internal class ProgramServices
 	public async Task CommentCase()
 	{
 
+		//Gets case by id and adds a new comment onto it based on input
+
 		Console.Clear();
 
 		Console.WriteLine("Vänligen ange ID-nummer för ärendet kommentar önskas läggas till på: ");
@@ -119,6 +125,8 @@ internal class ProgramServices
 
 	public async Task GetCases()
 	{
+		//Outputs all existing cases and some basic information about them (including comments)
+
 		Console.Clear();
 
 		Console.WriteLine("Hämtar ärenden...");
@@ -139,6 +147,8 @@ internal class ProgramServices
 
 	public async Task GetSingularCase()
 	{
+		//Searches case by id and displays all of its information
+
 		Console.Clear();
 
 		Console.WriteLine("Ange ID för ärendet du önskar söka efter: ");
@@ -169,6 +179,8 @@ internal class ProgramServices
 
 	public async Task ChangeStatus()
 	{
+		//Searches case by id and enables changing its status
+
 		Console.Clear();
 
 		Console.WriteLine("Vänligen ange ID för ärendet du vill ändra status för: ");
